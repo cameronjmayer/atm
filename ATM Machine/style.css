@@ -1,0 +1,44 @@
+.logo {
+    width: 800px;
+    height: auto;
+    position: relative;
+    padding-left: 100px;
+}
+
+@media (max-width: 800px) {
+    .logo {
+        width: 345px;
+        height: auto;
+        position: relative;
+        padding-left: 20px;
+    }
+}
+
+* {
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    * {
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+button {
+    background-color: #59606d;
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 200px;
+}
+
+#access,
+#withdraw,
+#deposit,
+#getBal {
+    margin: 40px;
+}
+
+.createAccount {
+    margin: 40px;
+}

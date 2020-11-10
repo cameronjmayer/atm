@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>ATM MACHINE</h1>
+
+    <p>Input your pin:</p>
+<input id="pinput"></input>
+<button onclick="getAccount()">Submit</button>
+
+<p id="account"><p>
+<script> 
+//bank account 
+let bankAccounts = [
+  //pin
+  //balance
+  //0
+  {
+    pin : 1239,
+    balance: 100.00
+    name: "Jerry"
+  }, 
+  //1 
+  {
+    pin: 3209,
+    balance: 5.00 
+    name: "Kelly"
+  },
+  //2 
+    {
+    pin: 2345,
+    balance: 205800.00 
+    name: "Emma"
+  },
+    {
+    pin: 6542,
+    balance: 163.00 
+    name: "Silvia"
+  },
+  {
+    pin: 6732,
+    balance: 985.00 
+    name: "Simon"
+  },
+];
+
+function getAccount(){
+	let pin = parseInt(document.getElementById("pinput").value); 
+  for(let i=0; i < bankAccounts.length; i++){
+    if( bankAccounts[i].pin === pin  ){
+    	document.getElementById("account").innerHTML = bankAccounts[i].balance; 
+        return; 
+    //  return bankAccounts[i]; 
+    }   
+  }
+  alert("Invalid Pin!"); 
+  return; 
+}
+
+
+
+</script>
+    
+</body>
+</html>
